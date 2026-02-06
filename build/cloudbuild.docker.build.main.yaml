@@ -9,6 +9,13 @@ steps:
     "."
   ]
 
+- name: 'gcr.io/cloud-builders/docker'
+args: [
+  'push', 
+  '-a', 
+  'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise'
+]
+
 - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   entrypoint: gcloud
   args:
@@ -24,11 +31,6 @@ steps:
   - '--allow-unauthenticated'
   - '--max-instances'
   - '1'
-
-images: [
-  "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:latest",
-  "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$SHORT_SHA"
-]
 
 options:
   logging: "CLOUD_LOGGING_ONLY"
