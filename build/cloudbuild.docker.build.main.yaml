@@ -8,15 +8,13 @@ steps:
     "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$SHORT_SHA",
     "."
   ]
-  
+
 - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   entrypoint: gcloud
   args:
   - 'run'
   - 'deploy'
-  - 'cicd-exercise'
-  - '--port'
-  - '8000'
+  - 'cicd-exercise-staging'
   - '--project'
   - 'cicd-exercise-boris-e8h3'
   - '--image'
