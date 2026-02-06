@@ -1,0 +1,16 @@
+steps:
+- name: "gcr.io/cloud-builders/docker"
+  args: [
+    "build",
+    "-t",
+    "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:latest",
+    "-t",
+    "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$SHORT_SHA",
+    "--file",
+    "measure_feature_drift/Dockerfile",
+    "."
+  ]
+images: [
+  "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:latest",
+  "europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$SHORT_SHA"
+]
