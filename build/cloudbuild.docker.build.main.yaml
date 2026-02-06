@@ -10,11 +10,11 @@ steps:
   ]
 
 - name: 'gcr.io/cloud-builders/docker'
-args: [
-  'push', 
-  '-a', 
-  'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise'
-]
+  args: [
+    'push', 
+    '-a', 
+    'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise'
+  ]
 
 - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   entrypoint: gcloud
