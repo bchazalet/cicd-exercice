@@ -16,20 +16,20 @@ images: [
 - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   entrypoint: gcloud
   args:
-    - 'run'
-    - 'deploy'
-    - 'cicd-exercise'
-    - '--port'
-    - '8000'
-    - '--project'
-    - 'cicd-exercise-boris-e8h3'
-    - '--image'
-    - 'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$TAG_NAME'
-    - '--region'
-    - 'europe-west2'
-    - '--allow-unauthenticated'
-    - '--max-instances'
-    - '1'
+  - 'run'
+  - 'deploy'
+  - 'cicd-exercise'
+  - '--port'
+  - '8000'
+  - '--project'
+  - 'cicd-exercise-boris-e8h3'
+  - '--image'
+  - 'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$TAG_NAME'
+  - '--region'
+  - 'europe-west2'
+  - '--allow-unauthenticated'
+  - '--max-instances'
+  - '1'
 
 options:
   logging: "CLOUD_LOGGING_ONLY"
