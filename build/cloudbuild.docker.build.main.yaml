@@ -18,7 +18,7 @@ steps:
   - '--project'
   - 'cicd-exercise-boris-e8h3'
   - '--image'
-  - 'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$TAG_NAME'
+  - 'europe-west2-docker.pkg.dev/cicd-exercise-boris-e8h3/docker-repository/cicd-exercise:$SHORT_SHA'
   - '--region'
   - 'europe-west2'
   - '--allow-unauthenticated'
